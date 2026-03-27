@@ -1,0 +1,22 @@
+PRACTICA 3: Backend
+===============================================
+Entrega:
+1. El Script de la base de datos
+2. Desarrollo del backend con spring boot
+3. Las pruebas con Postman
+4. El informe académico
+5. El PPT de la exposición
+
+
+PRACTICA 4: Backend + Frontend
+===============================================
+Entrega:
+1. El Script de la base de datos
+2. Desarrollo del backend con spring boot
+3. Las pruebas con Postman
+4. El informe académico
+5. El PPT de la exposición
+6. Desarrollo del Frontend
+
+
+
