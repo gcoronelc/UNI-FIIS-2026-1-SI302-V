@@ -2,9 +2,11 @@ package pe.edu.uni.proyecto1.service;
 
 public class PedidoService {
 
+	
     // Tasa de impuesto (porcentaje)
-    private static final double TASA_IMPUESTO = 0.18;  // Ejemplo: 16%
+    private static final double TASA_IMPUESTO = 0.18;  // Ejemplo: 18%
 
+	 
     /**
      * Método para calcular el impuesto sobre el monto del pedido.
      *
@@ -18,6 +20,7 @@ public class PedidoService {
         return importe * TASA_IMPUESTO;
     }
 
+	 
     /**
      * Método para calcular el total a pagar incluyendo el impuesto.
      *
