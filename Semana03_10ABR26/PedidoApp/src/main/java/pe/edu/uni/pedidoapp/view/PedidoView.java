@@ -1,7 +1,9 @@
 
 package pe.edu.uni.pedidoapp.view;
 
+import javax.swing.JOptionPane;
 import pe.edu.uni.pedidoapp.controller.PedidoController;
+import pe.edu.uni.pedidoapp.exception.ImporteNegativoException;
 
 /**
  *
@@ -210,20 +212,32 @@ public class PedidoView extends javax.swing.JFrame {
    }//GEN-LAST:event_btnSalirActionPerformed
 
    private void btnProcesarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProcesarActionPerformed
-      
-		// Datos
-		double importe = Double.parseDouble(txtImporte.getText());
-		
-		// Proceso
-		PedidoController controller = new PedidoController();
-		double impuesto = controller.calcularImpueso(importe);
-		double total = controller.calcularTotal(importe);
-		
-		// Reporte
-		txtImpuesto.setText("" + impuesto);
-		txtTotal.setText("" + total);
-		this.setEditMode(false);
-		
+
+		try {
+			
+			// Datos
+			double importe = Double.parseDouble(txtImporte.getText());
+
+			// Proceso
+			PedidoController controller = new PedidoController();
+			double impuesto = controller.calcularImpueso(importe);
+			double total = controller.calcularTotal(importe);
+
+			// Reporte
+			txtImpuesto.setText("" + impuesto);
+			txtTotal.setText("" + total);
+			this.setEditMode(false);
+			
+		} catch (ImporteNegativoException e) {
+			JOptionPane.showMessageDialog(rootPane, e.getMessage(), "ERROR", JOptionPane.ERROR_MESSAGE);
+		} catch(NumberFormatException e){
+			String msg = "El dato a ingresar debe ser un numero positivo.";
+			JOptionPane.showMessageDialog(rootPane, msg, "ERROR", JOptionPane.ERROR_MESSAGE);
+		} catch(Exception e){ // Exception siempre es el ultimo de la lista
+			String msg = "Error en el proceso, intentelo nuevamente.";
+			JOptionPane.showMessageDialog(rootPane, msg, "ERROR", JOptionPane.ERROR_MESSAGE);
+		}
+
    }//GEN-LAST:event_btnProcesarActionPerformed
 
    private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed

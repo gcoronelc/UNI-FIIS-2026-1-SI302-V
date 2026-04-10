@@ -19,11 +19,11 @@ public class PedidoController {
 		pedidoService = new PedidoService();
 	}
 	
-	public double calcularImpueso(double importe){
+	public double calcularImpueso(double importe) {
 		return pedidoService.calcularImpueso(importe);
 	}
 	
-	public double calcularTotal(double importe){
+	public double calcularTotal(double importe) {
 		return pedidoService.calcularTotal(importe);
 	}
 

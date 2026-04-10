@@ -3,7 +3,7 @@ package pe.edu.uni.pedidoapp.prueba;
 import pe.edu.uni.pedidoapp.exception.ImporteNegativoException;
 import pe.edu.uni.pedidoapp.service.PedidoService;
 
-public class Prueba01 {
+public class Prueba02 {
     
     public static void main(String[] args) {
 		 
@@ -11,7 +11,7 @@ public class Prueba01 {
 			 
 			 double importe, impuesto, total;
 			 // Datos
-			 importe = 500;
+			 importe = -500;
 			 // Proceso
 			 PedidoService service = new PedidoService();
 			 impuesto = service.calcularImpueso(importe);
