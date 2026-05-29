@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "d1eb0426-e60f-4899-aa91-e59623d0d429",
+		"name": "ECHO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24743107",
+		"_collection_link": "https://restless-crater-974849.postman.co/workspace/WS-UNI-FIIS-POO-2026-1~cf7e7fca-733e-4867-a96f-7d5475c3dbe9/collection/24743107-d1eb0426-e60f-4899-aa91-e59623d0d429?action=share&source=collection_link&creator=24743107"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "GET Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://postman-echo.com/get?foo1=bar1&foo2=bar2&nombre=Gustavo",
+							"protocol": "https",
+							"host": [
+								"postman-echo",
+								"com"
+							],
+							"path": [
+								"get"
+							],
+							"query": [
+								{
+									"key": "foo1",
+									"value": "bar1"
+								},
+								{
+									"key": "foo2",
+									"value": "bar2"
+								},
+								{
+									"key": "nombre",
+									"value": "Gustavo"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Gustavo\",\r\n    \"apellido\": \"Coronel\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://postman-echo.com/post",
+							"protocol": "https",
+							"host": [
+								"postman-echo",
+								"com"
+							],
+							"path": [
+								"post"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PUT",
+			"item": []
+		},
+		{
+			"name": "DELETE",
+			"item": []
+		},
+		{
+			"name": "PATCH",
+			"item": []
+		}
+	]
+}
