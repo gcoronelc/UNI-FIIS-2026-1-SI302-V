@@ -1,5 +1,7 @@
 select * from educa2..CURSO;
 
+UPDATE CURSO SET cur_matriculados=30 WHERE cur_id=7;
+
 select cur_precio precio from CURSO
 where cur_id = 2;
 
@@ -19,3 +21,4 @@ join MATRICULA m on a.alu_id = m.alu_id
 where m.cur_id = 1;
 
 
+SELECT * FROM MATRICULA;
