@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "27d0a3c0-17ab-49e2-9c2e-cfc8934b7b3f",
+		"name": "EDUCA 2026-1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24743107",
+		"_collection_link": "https://restless-crater-974849.postman.co/workspace/WS-UNI-FIIS-POO-2026-1~cf7e7fca-733e-4867-a96f-7d5475c3dbe9/collection/24743107-27d0a3c0-17ab-49e2-9c2e-cfc8934b7b3f?action=share&source=collection_link&creator=24743107"
+	},
+	"item": [
+		{
+			"name": "GET Precio OK",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/cursos/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"cursos",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Precio Error",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/cursos/777",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"cursos",
+						"777"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Matricular",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"idCurso\":3,\r\n    \"idAlumno\":10,\r\n    \"idEmpleado\":3,\r\n    \"cuotas\":2,\r\n    \"tipo\":\"REGULAR\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/matriculas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"matriculas"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
